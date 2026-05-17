@@ -6,86 +6,21 @@
     <meta name="description" content="Premium home management and concierge services in Sammamish & Issaquah. Trusted organization, vendor coordination, and household support for Eastside families.">
     <title>Vero Home | Premium Home Management in Sammamish & Issaquah</title>
     <title>Vero Home | Premium Home Management</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
-        
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            color: #333;
-            background: #f8f5f2;
-            line-height: 1.6;
-        }
-        h1, h2 { font-family: 'Playfair Display', serif; }
-        
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://source.unsplash.com/random/2000x1200/?luxury-home') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        .hero h1 {
-            font-size: 4.5rem;
-            margin: 0;
-            letter-spacing: 4px;
-        }
-        .hero p {
-            font-size: 1.5rem;
-            margin: 20px 0 40px;
-            font-weight: 300;
-        }
-        .btn {
-            padding: 16px 40px;
-            background: #d4af87;
-            color: #111;
-            text-decoration: none;
-            font-size: 1.1rem;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-        .btn:hover { background: #c9a46f; transform: scale(1.05); }
-
-        .section {
-            padding: 100px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .services {
-            background: white;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-        .card {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-        .footer {
-            background: #111;
-            color: #ddd;
-            text-align: center;
-            padding: 60px 20px;
-        }
-    </style>
+  
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero -->
-    <section class="hero">
-        <div>
+
+    <!-- Hero with Parallax -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
             <h1>VERO HOME</h1>
             <p>Genuine. Discreet. Exceptional Home Management</p>
-            <a href="#contact" class="btn">Begin Your Partnership</a>
+            <a href="#contact" class="btn">Start Today</a>
         </div>
     </section>
+
 
     <!-- Services -->
     <section class="section services">
@@ -106,7 +41,22 @@
         </div>
     </section>
 
-
+    <!-- Pricing Section -->
+    <section class="section" style="background:white;">
+        <h2 style="text-align:center; font-size:2.6rem; margin-bottom:50px;">Simple Pricing</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Monthly Retainer</h3>
+                <p style="font-size:2rem; margin:10px 0;">$850 – $1,900</p>
+                <p>8 to 20+ hours per month of dedicated support</p>
+            </div>
+            <div class="card">
+                <h3>One-Time Projects</h3>
+                <p style="font-size:2rem; margin:10px 0;">$115 – $135/hr</p>
+                <p>4-hour minimum • Ideal for deep organizing</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Testimonials -->
     <section class="section">
@@ -121,16 +71,36 @@
     <section class="section" id="contact" style="background:#111; color:white; text-align:center;">
         <h2 style="color:#d4af87;">Let’s Create a Home That Runs Beautifully</h2>
         <p style="font-size:1.3rem; max-width:600px; margin:30px auto;">
-            Serving Sammamish & Issaquah families with trust and excellence.
+            Serving Sammamish, Issaquah & Eastside families with trust and excellence.
         </p>
         <p><strong>Email:</strong> <a href="mailto:hello@vero-home.co" style="color:#d4af87;">hello@vero-home.co</a></p>
         <p><strong>Phone/Text:</strong> [Your Phone Number]</p>
     </section>
 
+    <!-- Contact Form -->
+    <section class="section" id="contact" style="background:#111; color:white; text-align:center;">
+        <h2 style="color:#d4af87; margin-bottom:30px;">Ready to Simplify Your Home?</h2>
+        
+        <form action="https://formspree.io/f/yourcodehere" method="POST" style="max-width:600px; margin:0 auto;">
+            <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:14px; margin:10px 0; border-radius:4px;">
+            <input type="email" name="email" placeholder="Email Address" required style="width:100%; padding:14px; margin:10px 0; border-radius:4px;">
+            <textarea name="message" rows="5" placeholder="Tell us about your needs..." required style="width:100%; padding:14px; margin:10px 0; border-radius:4px;"></textarea>
+            <button type="submit" class="btn" style="width:100%; padding:16px; font-size:1.1rem;">Send Message</button>
+        </form>
 
+        <p style="margin-top:30px;">Or reach us directly at <strong>hello@vero-home.co</strong></p>
+    </section>
     
     <div class="footer">
         <p>&copy; Vero Home • Premium Home Management • Sammamish, WA</p>
     </div>
+
+    <script>
+window.addEventListener('scroll', () => {
+    const scroll = window.scrollY;
+    document.querySelector('.hero-bg').style.transform = `translateY(${scroll * 0.4}px)`;
+});
+</script>
+
 </body>
 </html>
