@@ -30,8 +30,7 @@ h1, h2 {
 
 .hero p {
     font-size: 1.4rem;
-    margin: 20px 0 40px;
-}
+    margin: 20px 0 40px;}
 
 .btn {
     padding: 16px 40px;
@@ -147,4 +146,18 @@ input, textarea {
     position: relative;
     z-index: 2;
     text-align: center;
+}
+
+.hero-logo {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    margin-bottom: -30px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
 }
