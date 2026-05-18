@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium home management and concierge services in Sammamish & Issaquah. Trusted organization, vendor coordination, and household support for Eastside families.">
-    <title>Vero Home | Premium Home Management in Sammamish & Issaquah</title>
-    <title>Vero Home | Premium Home Management</title>
-  
-<link rel="stylesheet" href="styles.css">
+    <title>Vero Home | Home Organization & House Management Sammamish Issaquah</title>
+    <meta name="description" content="Professional home organization, house manager, and concierge services in Sammamish and Issaquah. Trusted local help for Eastside families.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -75,23 +73,35 @@
             Serving Sammamish, Issaquah & Eastside families with trust and excellence.
         </p>
         <p><strong>Email:</strong> <a href="mailto:julienne@vero-home.co  " style="color:#d4af87;">julienne@vero-home.co  </a></p>
-        <p><strong>Phone/Text:</strong> 415.827.3686 </p>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="section" id="contact" style="background:#111; color:white; text-align:center;">
-        <h2 style="color:#d4af87; margin-bottom:30px;">Ready to Simplify Your Home?</h2>
         
-        <form action="https://formspree.io/f/yourcodehere" method="POST" style="max-width:600px; margin:0 auto;">
-            <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:14px; margin:10px 0; border-radius:4px;">
-            <input type="email" name="email" placeholder="Email Address" required style="width:100%; padding:14px; margin:10px 0; border-radius:4px;">
-            <textarea name="message" rows="5" placeholder="Tell us about your needs..." required style="width:100%; padding:14px; margin:10px 0; border-radius:4px;"></textarea>
-            <button type="submit" class="btn" style="width:100%; padding:16px; font-size:1.1rem;">Send Message</button>
-        </form>
-
-        <p style="margin-top:30px;">Or reach us directly at <strong>julienne@vero-home.co  </strong></p>
     </section>
+
+
+<!-- Contact Form with Success Message -->
+<section class="section" id="contact" style="background:#111; color:white; text-align:center;">
+    <h2 style="color:#d4af87; margin-bottom:30px;">Ready to Simplify Your Home?</h2>
     
+    <form action="https://formspree.io/f/xqejkqzb" method="POST" style="max-width:600px; margin:0 auto;">
+        <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:14px; margin:10px 0; border-radius:4px;">
+        <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:14px; margin:10px 0; border-radius:4px;">
+        <textarea name="message" rows="6" placeholder="Tell us about your needs..." required style="width:100%; padding:14px; margin:10px 0; border-radius:4px;"></textarea>
+        
+        <button type="submit" class="btn" style="width:100%; padding:16px; font-size:1.1rem; margin-top:10px;">
+            Send Message
+        </button>
+    </form>
+
+    <!-- Success Message -->
+    <div id="success-message" style="display:none; margin-top:30px; padding:20px; background:#1a472a; color:#d4af87; border-radius:6px;">
+        <strong>Thank you!</strong><br>
+        Your message has been received. I'll get back to you soon.
+    </div>
+
+    <p style="margin-top:30px;">
+        Or email directly: <strong><a href="mailto:julienne@vero-home.co" style="color:#d4af87;">julienne@vero-home.co</a></strong>
+    </p>
+</section>
+        
     <div class="footer">
         <p>&copy; Vero Home • Premium Home Management • Sammamish, WA</p>
     </div>
@@ -101,6 +111,18 @@ window.addEventListener('scroll', () => {
     const scroll = window.scrollY;
     document.querySelector('.hero-bg').style.transform = `translateY(${scroll * 0.4}px)`;
 });
+</script>
+
+<script>
+    const form = document.querySelector('form');
+    const success = document.getElementById('success-message');
+
+    form.addEventListener('submit', () => {
+        setTimeout(() => {
+            form.style.display = 'none';
+            success.style.display = 'block';
+        }, 800);
+    });
 </script>
 
 </body>
