@@ -23,7 +23,7 @@ h1, h2 {
 }
 
 .hero h1 {
-    font-size: 4.2rem;
+    font-size: 3.2rem;
     margin: 0;
     letter-spacing: 3px;
 }
@@ -185,4 +185,43 @@ input, textarea {
         font-size: 1rem;
         padding: 14px 20px;
     }
+}
+
+/* ==================== CONTACT PARALLAX ==================== */
+.parallax-contact {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 20px;
+    color: white;
+    text-align: center;
+}
+
+.parallax-bg-contact {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 150px);
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+    transition: transform 0.1s ease-out;
+    z-index: 1;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .section { padding: 70px 15px; }
+    .hero h1 { font-size: 3.2rem; }
+}
+
+@media (max-width: 480px) {
+    .hero { height: 90vh; }
+    .parallax-contact { padding: 80px 10px; }
 }
