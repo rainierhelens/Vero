@@ -161,3 +161,28 @@ input, textarea {
     text-align: center;
     color: white;
 }
+
+/* Fix mobile form overflow */
+#contact form {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+#contact input,
+#contact textarea,
+#contact button {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Extra safety for very small screens */
+@media (max-width: 480px) {
+    #contact form {
+        padding: 0 10px;
+    }
+    
+    .btn {
+        font-size: 1rem;
+        padding: 14px 20px;
+    }
+}
